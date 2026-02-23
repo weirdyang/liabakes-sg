@@ -1,37 +1,49 @@
 # LiaBakes SG 🧁
 
-Interactive bakery website for [@liabakes_sg](https://instagram.com/liabakes_sg) — a home baker in Singapore.
+Interactive bakery website with a 3D cupcake hero built with Astro + Three.js.
 
-Built with **Astro** + **Three.js** (vanilla). Deployed to **GitHub Pages**.
-
-## Features
-
-- 3D interactive hero scene with floating cupcakes, cookies & donuts
-- Click/tap the main cupcake to spin it
-- Mouse/touch parallax on the 3D scene
-- Stitch-inspired blue/pink/lavender color palette
-- Scroll animations, responsive layout
-- Instagram & WhatsApp order CTAs
-
-## Setup
+## Quick Start
 
 ```bash
 npm install
-npm run dev      # localhost:4321
-npm run build    # outputs to ./dist
+npm run dev
 ```
+
+## Adding the 3D Model
+
+The hero section loads a GLTF model from `public/cupcake.glb`. To set it up:
+
+1. Go to [Cutie Cupcake on Sketchfab](https://sketchfab.com/3d-models/cutie-cupcake-5a0a52b6af8e431f80fd2044069474a5) (or any cupcake/cake model you like)
+2. Click **Download** → choose **glTF** format
+3. Extract the `.glb` file
+4. Rename it to `cupcake.glb` and place it in the `public/` folder
+
+The model is auto-scaled and centered, so any reasonably-sized GLTF will work.
+
+**Attribution:** If using the Cutie Cupcake model, credit is already included in the footer. Update the credit link if you use a different model.
 
 ## Deploy to GitHub Pages
 
 1. Push this repo to GitHub
-2. Go to **Settings → Pages → Source** → select **GitHub Actions**
-3. The workflow in `.github/workflows/deploy.yml` handles the rest
+2. Go to **Settings → Pages → Source → GitHub Actions**
+3. The included workflow auto-deploys on push to `main`
 4. Update `site` in `astro.config.mjs` to your actual GitHub Pages URL
 
-## Customization
+## Customise
 
-- **Colors**: Edit CSS variables in `:root` in `index.astro`
-- **Menu items**: Edit the menu cards HTML section
-- **About text**: Edit the about section
-- **WhatsApp link**: Replace `https://wa.me/` with `https://wa.me/65XXXXXXXX`
-- **Photos**: Replace the emoji placeholders in the about visual with actual `<img>` tags
+- **About section:** Replace the emoji placeholder with an actual photo
+- **Menu items:** Update to match real products
+- **WhatsApp:** Change `https://wa.me/` to `https://wa.me/65XXXXXXXX`
+- **Instagram:** Already set to @liabakes_sg
+- **Colors:** Edit CSS variables in `:root` in `index.astro`
+- **3D Model:** Swap `public/cupcake.glb` with any `.glb` file
+
+## Tech Stack
+
+- [Astro](https://astro.build) — static site generator
+- [Three.js](https://threejs.org) — 3D rendering (GLTFLoader + OrbitControls)
+- GitHub Pages — hosting
+
+## License
+
+Site code is free to use. 3D model has its own license (check Sketchfab).

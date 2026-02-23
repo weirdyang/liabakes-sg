@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://liabakes-sg.github.io',
+  site: 'https://liabakes.wdym.fyi',
   output: 'static',
 });
