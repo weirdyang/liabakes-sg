@@ -1,23 +1,25 @@
-# LiaBakes SG — Sweet Worlds
+# LiaBakes SG
 
-Fully redesigned interactive bakery website.
+A small, editorial-style website for LiaBakes SG, a home-baking project in Singapore.
 
-Single-file WebGL experience inspired by experimental isometric worlds (RSPCA Animal Futures style).
+## Development
 
-## Live
+```sh
+npm install
+npm run dev
+```
 
-Open `index.html` directly or serve the folder. No build step required.
+## Build
 
-## Tech
+```sh
+npm run build
+npm run preview
+```
 
-- Three.js (via CDN importmap)
-- Pure HTML/CSS/JS
-- OrbitControls, shadows, particles, auto-rotate
+The site is built with Astro and deployed as a static site. The landing page includes the bakery story, a visual overview of bake categories, and an Instagram enquiry link.
 
-## Customise
+## Content notes
 
-- WhatsApp number in the order section
-- Menu items
-- Colors in the CSS variables
-
-Pushed as a complete visual redo. The old Astro version is preserved in git history if needed.
+- Update the bake categories and descriptions in `src/pages/index.astro` to reflect the current menu.
+- The Instagram profile is linked as the enquiry channel. Add a verified WhatsApp number before publishing a WhatsApp order link.
+- Product photography currently uses remotely hosted Unsplash images as visual placeholders. Replace these with LiaBakes' own product photography before launch.
